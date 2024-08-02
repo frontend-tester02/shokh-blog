@@ -13,7 +13,7 @@ const creteRound = Crete_Round({
 const workSans = Work_Sans({
   weight: ['500', '600'],
   subsets: ['latin'],
-  variable: '--fonst-workSans'
+  variable: '--font-workSans'
 })
 
 export const metadata: Metadata = {
