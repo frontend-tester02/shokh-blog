@@ -3,10 +3,15 @@ import { CalendarDays, Clock, Dot, Minus } from "lucide-react"
 import Image from "next/image"
 import Link from "next/link"
 import { Badge } from "../ui/badge"
+import { cn } from "@/lib/utils"
 
-const BlogCard = (blog: IBlog) => {
+interface Props extends IBlog {
+    isVertical?: boolean
+}
+
+const BlogCard = (blog: Props) => {
     return (
-        <div className="grid gap-4 group grid-cols-1 md:grid-cols-2">
+        <Link href={'/'} className={cn('grid gap-4 group', blog.isVertical ? "grid-cols-1" : 'grid-cols-1 md:grid-cols-2')}>
             <div className="relative bg-secondary rounded-md">
                 <Image 
                 width={650} 
@@ -37,7 +42,7 @@ const BlogCard = (blog: IBlog) => {
                 <p className="text-muted-foreground line-clamp-3">{blog.description}</p>
 
                 {/* Author */}
-                <div className="flex items-center gap-4">
+                <div className="flex items-center gap-4 mt-2">
                     <div className="flex items-center gap-2">
                         <Image
                         src={'/author/thomas-macaulay.jpg'}
@@ -55,7 +60,7 @@ const BlogCard = (blog: IBlog) => {
 
                 </div>
             </div>
-        </div>
+        </Link>
     )
 }
 
