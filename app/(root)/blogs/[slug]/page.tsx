@@ -1,14 +1,16 @@
 import { Button } from "@/components/ui/button"
-import { ArrowRight, CalendarDays, Clock, Facebook, Link, Link2, Linkedin, Minus, Send, Twitter } from "lucide-react"
+import { ArrowRight, CalendarDays, Clock, Facebook, Link2, Linkedin, Minus, Send, Twitter } from "lucide-react"
 import Image from "next/image"
 import parse from 'html-react-parser';
-import { content } from "@/constants";
 import { getDetailedBlog } from "@/service/blog.service";
 import { getReadingTime } from "@/lib/utils";
 import { format } from "date-fns";
+import Link from "next/link";
 
 async function SlugPage ({params}: {params: {slug:string}}) {
     const blog = await getDetailedBlog(params.slug)
+    console.log(blog);
+    
     return (
         <div className="pt-[15vh] max-w-5xl mx-auto">
             <h1 className="lg-text-6xl md:text-5xl text-4xl font-creteRound">
@@ -89,10 +91,9 @@ async function SlugPage ({params}: {params: {slug:string}}) {
                     </p>
                     <Link
                     href={'/'}
-                    className="flex items-center gap-2 hover:text-blue-500 underline transition-colors"
-                    >
-                    <span>See all posts by this author</span>
-                    <ArrowRight/>
+                    className="flex items-center gap-2 hover:text-blue-500 underline transition-colors">
+                        <span>See all posts by this author</span>
+                        <ArrowRight/>
                     </Link>
                 </div>
             </div>

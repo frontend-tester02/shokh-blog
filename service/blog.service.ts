@@ -1,5 +1,4 @@
 import { IBlog } from "@/types"
-import exp from "constants"
 import request, { gql } from "graphql-request"
 
 const graphqlAPI = process.env.NEXT_PUBLIC_GRAPHCMS_ENDPOINT!
@@ -46,26 +45,26 @@ export const getDetailedBlog = async (slug:string) => {
     query MyQuery($slug: String!) {
         blog(where: {slug: $slug}) {
             author {
-            name
-            image {
+                name
+                image {
+                    url
+                }
+                bio
+                }
+                content {
+                html
+                }
+                createdAt
+                image {
                 url
+                }
+                slug
+                tag {
+                name
+                slug
+                }
+                title
             }
-            bio
-            }
-            content {
-            html
-            }
-            createdAt
-            image {
-            url
-            }
-            slug
-            tag {
-            name
-            slug
-            }
-            title
-        }
         }
     `
 
