@@ -72,8 +72,10 @@ const BlogCard = (blog: Props) => {
                     <div className="flex items-center gap-2">
                         <Link href={`/tags/${blog.tag.slug}`}>
                             <Badge variant={'secondary'} role="button">{blog.tag.name}</Badge>
-                        </Link>
-                        
+                        </Link> 
+                        <Link href={`/categories/${blog.category.slug}`}>
+                            <Badge variant={'secondary'} role="button">{blog.category.name}</Badge>
+                        </Link> 
                     </div>
 
                 </div>
