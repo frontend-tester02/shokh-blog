@@ -1386,6 +1386,9 @@ video {
 .max-w-6xl {
   max-width: 72rem;
 }
+.max-w-xl {
+  max-width: 36rem;
+}
 .flex-1 {
   flex: 1 1 0%;
 }
@@ -1611,6 +1614,12 @@ video {
 .pt-\[15vh\] {
   padding-top: 15vh;
 }
+.pt-\[36\] {
+  padding-top: 36;
+}
+.pt-36 {
+  padding-top: 9rem;
+}
 .text-center {
   text-align: center;
 }
@@ -1644,6 +1653,10 @@ video {
 .text-xs {
   font-size: 0.75rem;
   line-height: 1rem;
+}
+.text-xl {
+  font-size: 1.25rem;
+  line-height: 1.75rem;
 }
 .font-bold {
   font-weight: 700;

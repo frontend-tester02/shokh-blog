@@ -60,6 +60,11 @@
       "static/chunks/webpack.js",
       "static/chunks/main-app.js",
       "static/chunks/app/(root)/contact/page.js"
+    ],
+    "/(root)/author/[id]/page": [
+      "static/chunks/webpack.js",
+      "static/chunks/main-app.js",
+      "static/chunks/app/(root)/author/[id]/page.js"
     ]
   }
 }
