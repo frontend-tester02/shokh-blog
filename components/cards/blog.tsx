@@ -12,7 +12,7 @@ interface Props extends IBlog {
     isVertical?: boolean
 }
 
-const BlogCard = (blog: Props) => {
+const BlogCard = (blog: Props) =>{
     return (
         <div 
         // href={`/blogs/${blog.slug}`} 
