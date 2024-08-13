@@ -1248,6 +1248,12 @@ video {
 .mt-auto {
   margin-top: auto;
 }
+.mr-2 {
+  margin-right: 0.5rem;
+}
+.me-2 {
+  margin-inline-end: 0.5rem;
+}
 .line-clamp-2 {
   overflow: hidden;
   display: -webkit-box;
@@ -1320,6 +1326,9 @@ video {
 .h-full {
   height: 100%;
 }
+.h-3 {
+  height: 0.75rem;
+}
 .min-h-96 {
   min-height: 24rem;
 }
@@ -1367,6 +1376,9 @@ video {
 }
 .w-full {
   width: 100%;
+}
+.w-3 {
+  width: 0.75rem;
 }
 .max-w-2xl {
   max-width: 42rem;
