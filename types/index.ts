@@ -20,6 +20,7 @@ export interface IAuthor {
         url: string
     }
     bio: string
+    blogs: IBlog[]
 }
 
 export interface ICategoryAndTags {
