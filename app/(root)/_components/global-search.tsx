@@ -1,8 +1,9 @@
 import { Badge } from "@/components/ui/badge"
-import { Drawer, DrawerContent, DrawerTrigger } from "@/components/ui/drawer"
+import { Drawer, DrawerClose, DrawerContent, DrawerTrigger } from "@/components/ui/drawer"
 import { Input } from "@/components/ui/input"
 import { popularCategories, popularTags } from "@/constants"
-import { Search } from "lucide-react"
+import { Minus, Search } from "lucide-react"
+import Link from "next/link"
 
 const GlobalSearch = () => {
     return (
@@ -16,7 +17,13 @@ const GlobalSearch = () => {
                 <div className="container max-w-6xl mx-auto py-12">
                     <Input className="bg-secondary" placeholder="Type to serch blog..."/>
                     <div className="flex flex-col space-2-2 mt-4">
-                        <p className="font-creteRound text-2xl mb-2">See posts by categories</p>
+                        <div className="flex items-center gap-2">
+                            <p className="font-creteRound text-2xl mb-2">See posts by categories</p>
+                            <Minus/>
+                            <Link href={'/categories'} >
+                                <DrawerClose className="text-blue-500 underline hover:opacity-90">See all</DrawerClose>
+                            </Link>
+                        </div>
                         <div className="flex flex-wrap gap-2">
                             {popularCategories.map(item => (
                                 <Badge key={item.slug} variant={'secondary'}>{item.name}</Badge>
@@ -25,7 +32,14 @@ const GlobalSearch = () => {
                     </div>
 
                     <div className="flex flex-col space-2-2 mt-4">
-                        <p className="font-creteRound text-2xl mb-2">See posts by tags</p>
+                        <div className="flex items-center gap-2">
+                            <p className="font-creteRound text-2xl mb-2">See posts by tags</p>
+                            <Minus/>
+                            <Link href={'/tags'}>
+                                <DrawerClose className="text-blue-500 underline hover:opacity-90">See all</DrawerClose>
+                            </Link>
+                        </div>
+                        
                         <div className="flex flex-wrap gap-2">
                             {popularTags.map(item => (
                                 <Badge key={item.slug} variant={'secondary'}>{item.name}</Badge>
