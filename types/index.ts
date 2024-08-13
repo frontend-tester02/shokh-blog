@@ -21,6 +21,7 @@ export interface IAuthor {
     }
     bio: string
     blogs: IBlog[]
+    id: string
 }
 
 export interface ICategoryAndTags {
