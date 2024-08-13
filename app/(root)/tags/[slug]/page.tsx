@@ -12,7 +12,7 @@ async function Page({ params }: {params:{slug: string}}) {
                 <h2 className="text-center text-4xl section-title font-creteRound">
                     <span>
                         {blogs.map(blog => (
-                            blog.tag.name
+                            blog.tag.name 
                         ))}
                     </span>
                 </h2>

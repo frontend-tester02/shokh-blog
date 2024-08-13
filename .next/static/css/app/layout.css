@@ -1323,6 +1323,9 @@ video {
 .min-h-96 {
   min-height: 24rem;
 }
+.min-h-\[30vh\] {
+  min-height: 30vh;
+}
 .min-h-\[40vh\] {
   min-height: 40vh;
 }
@@ -1331,9 +1334,6 @@ video {
 }
 .min-h-\[80px\] {
   min-height: 80px;
-}
-.min-h-\[30vh\] {
-  min-height: 30vh;
 }
 .w-10 {
   width: 2.5rem;
