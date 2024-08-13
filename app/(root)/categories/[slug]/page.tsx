@@ -5,6 +5,8 @@ import Link from 'next/link';
 
 async function Page({ params }: {params:{slug: string}}) {
     const category = await getBlogsByCategory(params.slug)
+    console.log(category);
+    
     
     return (
         <div className='max-w-6xl mx-auto'>
