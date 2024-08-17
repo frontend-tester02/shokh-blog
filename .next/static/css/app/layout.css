@@ -1498,11 +1498,6 @@ video {
   margin-top: calc(1rem * calc(1 - var(--tw-space-y-reverse)));
   margin-bottom: calc(1rem * var(--tw-space-y-reverse));
 }
-.space-y-8 > :not([hidden]) ~ :not([hidden]) {
-  --tw-space-y-reverse: 0;
-  margin-top: calc(2rem * calc(1 - var(--tw-space-y-reverse)));
-  margin-bottom: calc(2rem * var(--tw-space-y-reverse));
-}
 .self-end {
   align-self: flex-end;
 }
@@ -1689,6 +1684,9 @@ video {
   --tw-text-opacity: 1;
   color: rgb(59 130 246 / var(--tw-text-opacity));
 }
+.text-destructive {
+  color: hsl(var(--destructive));
+}
 .text-destructive-foreground {
   color: hsl(var(--destructive-foreground));
 }
@@ -1710,9 +1708,6 @@ video {
 .text-white {
   --tw-text-opacity: 1;
   color: rgb(255 255 255 / var(--tw-text-opacity));
-}
-.text-destructive {
-  color: hsl(var(--destructive));
 }
 .underline {
   text-decoration-line: underline;
