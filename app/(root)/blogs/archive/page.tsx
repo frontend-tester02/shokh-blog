@@ -2,7 +2,7 @@ import { Archive, Dot, Home } from 'lucide-react'
 import Link from 'next/link'
 import React from 'react'
 
-const ArchivePage = () => {
+async function ArchivePage() {
     return (
         <div className='max-w-6xl mx-auto'>
             <div className="relative min-h-[40vh] flex items-center justify-end flex-col">
@@ -40,7 +40,9 @@ const ArchivePage = () => {
 
             <div className='flex flex-col space-y-2 mt-8'>
                 <div className='flex gap-2 text-lg text-muted-foreground'>
-                    <p>05 Dec</p>
+                    <p>
+                        5 dec
+                    </p>
                     <Dot className='text-white w-8 h-8'/>
                     <div className='hover:text-white hover:underline cursor-pointer'>
                         The AGI hype train is running out of steam
