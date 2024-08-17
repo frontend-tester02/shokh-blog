@@ -1,6 +1,6 @@
 import { type ClassValue, clsx } from "clsx"
-import { isNullableType } from "graphql"
 import { twMerge } from "tailwind-merge"
+import {z} from 'zod'
 
 export function cn(...inputs: ClassValue[]) {
   return twMerge(clsx(inputs))
@@ -41,6 +41,10 @@ export function getReadingTime(content: string) {
     return minutes
   }
 
-
-
 }
+
+export const contactSchema = z.object({
+  message: z.string().min(10),
+  email: z.string().email(),
+  name: z.string().min(3)
+})
