@@ -17,8 +17,8 @@ export const getAuthors = async() => {
                 id
                 }
             }
-        }
-    `
+        }`
+    
 
     const {authors} = await request<{authors: IAuthor[]}>(graphqlAPI, query)
 
@@ -63,8 +63,7 @@ export const getDetailedAuthor = async(id:string) => {
                 description
                 }
             }
-        }
-    `
+        }`
 
     const {author} = await request<{author: IAuthor}>(graphqlAPI, query, {id})
 

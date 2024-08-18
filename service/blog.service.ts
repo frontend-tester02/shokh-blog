@@ -33,8 +33,7 @@ export const getBlogs = async () => {
                 }
                 slug
             }
-        }
-    `
+        }`
 
     const {blogs} = await request<{blogs: IBlog[]}>(graphqlAPI, query, )
 
@@ -67,8 +66,7 @@ export const getDetailedBlog = cache (async (slug:string) => {
                 }
                 title
             }
-        }
-    `
+        }`
 
     const {blog} = await request<{blog: IBlog}>(graphqlAPI, query, {slug})
     return blog
@@ -86,8 +84,8 @@ export const getSearchBlogs = async (title: string) => {
                 createdAt
                 
             }
-        }
-    `
+        }`
+    
 
     const {blogs} = await request<{blogs: IBlog[]}>(graphqlAPI, query, {title})
 
@@ -103,7 +101,8 @@ export const getArchiveBlogs = async () => {
                 slug
             }
         }
-    `
+        `
+    
 
 
     const {blogs} = await request<{blogs: IBlog[]}>(graphqlAPI, query,)
