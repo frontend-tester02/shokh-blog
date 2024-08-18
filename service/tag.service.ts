@@ -10,6 +10,11 @@ export const getTags = async () => {
             tags {
                 name
                 slug
+                blogs {
+                ... on Blog {
+                    id
+                }
+                }
             }
             }`
     
