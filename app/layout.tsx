@@ -4,6 +4,7 @@ import "./globals.css";
 import { ChildProps } from "@/types";
 import { ThemeProvider } from "@/components/providers/theme-provider";
 import { Toaster } from "@/components/ui/sonner";
+import NextTopLoader from 'nextjs-toploader';
 
 const inter = Inter({ subsets: ["latin"] });
 const creteRound = Crete_Round({
@@ -48,7 +49,9 @@ function RootLayout({children} : ChildProps) {
         defaultTheme="system"
         enableSystem
         disableTransitionOnChange
-        >{children}
+        >
+          <NextTopLoader showSpinner={false}/>
+          {children}
         <Toaster position="top-center"/>
         </ThemeProvider>
         </body>
