@@ -6,11 +6,22 @@ import { getDetailedBlog } from "@/service/blog.service";
 import { getReadingTime } from "@/lib/utils";
 import { format } from "date-fns";
 import Link from "next/link";
-import { authors } from "@/constants";
+
+export async function generateMetadata({params}: {params: {slug:string}}) {
+    const blog = await getDetailedBlog(params.slug)
+
+    return {
+        title: blog.title,
+        description: blog.description,
+
+        openGraph: {
+            images: blog.image.url,
+        },
+    }
+}
 
 async function SlugPage ({params}: {params: {slug:string}}) {
     const blog = await getDetailedBlog(params.slug)
-    console.log(blog);
     
     return (
         <div className="pt-[15vh] max-w-5xl mx-auto">
