@@ -22,7 +22,7 @@ const workSans = Work_Sans({
 
 export const metadata: Metadata = {
 	metadataBase: new URL('https://shokh-blog.ac'),
-	title: 'Nur blog',
+	title: 'Tech blog',
 	description:
 		"Dasturlash haqida yangiliklar, maslahatlar va dasturlash sohasidagi eng so'nggi xabarlar. Bizning blogda dasturlashni o'rganish va rivojlantirish uchun qo'llanma topishingiz mumkin.",
 	authors: [{ name: 'Nuriddinov Shokhrukh', url: 'https://shokh-blog.ac' }],
@@ -30,7 +30,7 @@ export const metadata: Metadata = {
 	keywords:
 		"nuriddinov shokhrukh, shokh,  dasturlashga oid bloglar, reactjs uzbek tilida, vuejs uzbek tilida, redux uzbek tilida, bepul dasturlash, rezyume yozish, portfolio, javascript, reactjs, vuejs, javascript darslari, reactjs darslari, vuejs darslari, dasturlash darslari, o'zbek tilida dasturlash, reactjs o'zbek tilida, reactjs darslari o'zbek tilida, javascript darslari, javascript darslari o'zbek tilida, dasturash darslari o'zbek tilida, dasturlashni o'rganish, dasturlash, IT loyihalar o'zbek tilida",
 	openGraph: {
-		title: 'Nur blog',
+		title: 'Tech blog',
 		description:
 			'Dasturlash haqida yangiliklar, maslahatlar, va dasturlash sohasidagi eng soʻnggi xabarlar. Bizning blogda dasturlashni oʻrganish va rivojlantirish uchun qoʻllanma topishingiz mumkin.',
 		type: 'website',
