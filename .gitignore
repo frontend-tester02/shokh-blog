@@ -10,10 +10,11 @@
 /coverage
 
 # next.js
-/.next/
+.next/
 /out/
 
-# production
+# productiongit rm -r --cached .next
+
 /build
 
 # misc
